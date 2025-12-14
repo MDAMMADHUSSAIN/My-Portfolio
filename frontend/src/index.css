@@ -1,0 +1,6 @@
+@import "tailwindcss";
+*{
+  background: #000;
+  font-family: cairo;
+  box-sizing: border-box;
+}
