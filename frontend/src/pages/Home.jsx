@@ -14,7 +14,7 @@ import Webtech from "../assets/webtech.webp";
 import Folder from "../components/custom-components/Folder";
 
 const Home = () => {
-  const images = [
+  const images1 = [
   <a href={OS} download target="_blank" rel="noreferrer">
     <img src={OS} alt="" className="w-full h-full object-cover cursor-pointer" />
   </a>,
@@ -78,10 +78,21 @@ const Home = () => {
               size={1}
               color="#5227FF"
               className="custom-folder"
-              items={images}
+              items={images1}
             />
-            <Folder size={1} color="#5227FF" className="custom-folder" />
-            <Folder size={1} color="#5227FF" className="custom-folder" />
+            <Folder
+              size={1}
+              color="#5227FF"
+              className="custom-folder"
+              items={images1}
+            />
+            <Folder
+              size={1}
+              color="#5227FF"
+              className="custom-folder"
+              items={images1}
+            />
+           
           </div>
         </div>
 
