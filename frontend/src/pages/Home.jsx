@@ -8,23 +8,44 @@ import Interest from "../assets/interest.png";
 import Mern1 from "../assets/mern.webp";
 import Mern2 from "../assets/mern2.png";
 import OS from "../assets/OS.png";
+import OSpdf from "../assets/pdfcertificates/ospdf.pdf";
 import AI from "../assets/AI.png";
+import AIpdf from "../assets/pdfcertificates/aipdf.pdf";
 import PM from "../assets/PM.png";
+import PMpdf from "../assets/pdfcertificates/pmpdf.pdf";
+import CS from "../assets/CS.png";
+import CSpdf from "../assets/pdfcertificates/cspdf.pdf";
+import DSA from "../assets/DSA.png";
+import DSApdf from "../assets/pdfcertificates/dsapdf.pdf";
+import Python from "../assets/python.png";
+import Pythonpdf from "../assets/pdfcertificates/python.pdf";
 import Webtech from "../assets/webtech.webp";
 import Folder from "../components/custom-components/Folder";
 
 const Home = () => {
   const images1 = [
-  <a href={OS} download target="_blank" rel="noreferrer">
+  <a href={OSpdf} download target="_blank" rel="noreferrer">
     <img src={OS} alt="" className="w-full h-full object-cover cursor-pointer" />
   </a>,
-  <a href={AI} download target="_blank" rel="noreferrer">
+  <a href={AIpdf} download target="_blank" rel="noreferrer">
     <img src={AI} alt="" className="w-full h-full object-cover cursor-pointer" />
   </a>,
-  <a href={PM} download target="_blank" rel="noreferrer">
+  <a href={PMpdf} download target="_blank" rel="noreferrer">
     <img src={PM} alt="" className="w-full h-full object-cover cursor-pointer" />
   </a>,
 ];
+  const images2 = [
+  <a href={CSpdf} download target="_blank" rel="noreferrer">
+    <img src={CS} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
+  <a href={DSApdf} download target="_blank" rel="noreferrer">
+    <img src={DSA} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
+  <a href={Pythonpdf} target="_blank" rel="noreferrer">
+    <img src={Python} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
+];
+
 
 
   return (
@@ -75,24 +96,17 @@ const Home = () => {
           </p>
           <div className="h-[100px] relative mt-20 flex flex-wrap justify-evenly gap-20">
             <Folder
-              size={1}
+              size={2}
               color="#5227FF"
               className="custom-folder"
               items={images1}
             />
             <Folder
-              size={1}
+              size={2}
               color="#5227FF"
               className="custom-folder"
-              items={images1}
+              items={images2}
             />
-            <Folder
-              size={1}
-              color="#5227FF"
-              className="custom-folder"
-              items={images1}
-            />
-           
           </div>
         </div>
 
