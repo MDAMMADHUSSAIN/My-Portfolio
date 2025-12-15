@@ -14,12 +14,18 @@ import Webtech from "../assets/webtech.webp";
 import Folder from "../components/custom-components/Folder";
 
 const Home = () => {
-
   const images = [
-   <img src={OS} alt="" className="w-full h-full object-cover" />,
-  <img src={AI} alt="" className="w-full h-full object-cover" />,
-  <img src={PM} alt="" className="w-full h-full object-cover" />
+  <a href={OS} download target="_blank" rel="noreferrer">
+    <img src={OS} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
+  <a href={AI} download target="_blank" rel="noreferrer">
+    <img src={AI} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
+  <a href={PM} download target="_blank" rel="noreferrer">
+    <img src={PM} alt="" className="w-full h-full object-cover cursor-pointer" />
+  </a>,
 ];
+
 
   return (
     <div className="w-full h-screen">
@@ -67,9 +73,13 @@ const Home = () => {
             part of projects that challenge my skills and encourage innovation
             in web technologies.
           </p>
-
           <div className="h-[100px] relative mt-20 flex flex-wrap justify-evenly gap-20">
-            <Folder size={1} color="#5227FF" className="custom-folder" items={images}/>
+            <Folder
+              size={1}
+              color="#5227FF"
+              className="custom-folder"
+              items={images}
+            />
             <Folder size={1} color="#5227FF" className="custom-folder" />
             <Folder size={1} color="#5227FF" className="custom-folder" />
           </div>
