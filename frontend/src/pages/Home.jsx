@@ -8,6 +8,7 @@ import Interest from "../assets/interest.png";
 import Mern1 from "../assets/mern.webp";
 import Mern2 from "../assets/mern2.png";
 import Webtech from "../assets/webtech.webp";
+import Folder from "../components/custom-components/Folder";
 
 const Home = () => {
   return (
@@ -56,6 +57,10 @@ const Home = () => {
             part of projects that challenge my skills and encourage innovation
             in web technologies.
           </p>
+
+          <div className="h-[600px] fixed top-120 left-48">
+            <Folder size={1} color="#5227FF" className="custom-folder" />
+          </div>
         </div>
 
         <CardSwap
@@ -80,7 +85,8 @@ const Home = () => {
           <Card className="text-blue-500 p-8">
             <h3>University Project</h3>
             <p className="text-white text-sm">
-             AI-Based Text Recognition System | Model Training & Evaluation | Final Year Project
+              AI-Based Text Recognition System | Model Training & Evaluation |
+              Final Year Project
             </p>
             <br />
             <img
@@ -92,7 +98,8 @@ const Home = () => {
           <Card className="text-blue-500 p-8">
             <h3>Career | Skills & Interest</h3>
             <p className="text-white text-sm">
-              MERN Stack Specialist | Web Technology Enthusiast | High-Performance CSR & SSR Optimization
+              MERN Stack Specialist | Web Technology Enthusiast |
+              High-Performance CSR & SSR Optimization
             </p>
             <br />
             <div className="grid grid-cols-2 grid-rows-2 gap-2">
