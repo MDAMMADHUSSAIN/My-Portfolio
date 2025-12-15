@@ -117,7 +117,7 @@ const Home = () => {
           pauseOnHover={true}
         >
           <Card className="text-blue-500 p-8">
-            <h3>Btech University</h3>
+            <h3 className="text-2xl">Btech University</h3>
             <p className="text-white text-sm">
               Dr. APJ Abdul Kalam Technical University | Computer Science
               Engineering | 2020 -2024 |
@@ -129,7 +129,7 @@ const Home = () => {
               className="w-full h-[80%] object-fill object-center"
             />
           </Card>
-          <Card className="text-blue-500 p-8">
+          <Card className="text-blue-500 text-2xl p-4 overflow-clip">
             <h3>University Project</h3>
             <p className="text-white text-sm">
               AI-Based Text Recognition System | Model Training & Evaluation |
@@ -139,17 +139,17 @@ const Home = () => {
             <img
               src={Project}
               alt="AKTU"
-              className="w-full h-[80%] object-fill object-center"
+              className="w-full h-[80%] object-contain object-center"
             />
           </Card>
-          <Card className="text-blue-500 p-8">
+          <Card className="text-blue-500 p-8 text-2xl">
             <h3>Career | Skills & Interest</h3>
             <p className="text-white text-sm">
               MERN Stack Specialist | Web Technology Enthusiast |
               High-Performance CSR & SSR Optimization
             </p>
             <br />
-            <div className="grid grid-cols-2 grid-rows-2 gap-2">
+            <div className="grid grid-cols-2 grid-rows-2 gap-1">
               <img
                 src={Interest}
                 alt="AKTU"
