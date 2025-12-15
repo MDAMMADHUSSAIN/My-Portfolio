@@ -58,7 +58,9 @@ const Home = () => {
             in web technologies.
           </p>
 
-          <div className="h-[600px] fixed top-120 left-48">
+          <div className="h-[600px] relative mt-20 flex flex-wrap justify-evenly gap-20">
+            <Folder size={1} color="#5227FF" className="custom-folder" />
+            <Folder size={1} color="#5227FF" className="custom-folder" />
             <Folder size={1} color="#5227FF" className="custom-folder" />
           </div>
         </div>
