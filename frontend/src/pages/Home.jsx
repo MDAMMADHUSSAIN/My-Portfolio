@@ -21,7 +21,7 @@ import Python from "../assets/python.png";
 import Pythonpdf from "../assets/pdfcertificates/python.pdf";
 import Webtech from "../assets/webtech.webp";
 import Folder from "../components/custom-components/Folder";
-import Footer from '../components/footer/Footer'
+
 const Home = () => {
   const images1 = [
     <a href={OSpdf} download target="_blank" rel="noreferrer">
@@ -219,7 +219,7 @@ const Home = () => {
           <TeamCard />
         </div>
       </div>
-     <Footer />
+
     </div>
   );
 };

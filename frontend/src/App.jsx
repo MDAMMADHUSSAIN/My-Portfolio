@@ -6,12 +6,13 @@ import Contact from "./pages/Contact";
 import Teams from "./pages/Teams";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Navbar from './components/header/Navbar'
+import Navbar from "./components/header/Navbar";
+import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

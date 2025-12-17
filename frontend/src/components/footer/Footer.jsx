@@ -19,7 +19,7 @@ const Footer = () => {
       ];
 
   return (
-    <div className='w-full bg-white flex justify-center items-center'>
+    <div className='w-full bg-white flex justify-center items-center bottom-0 left-0 pb-25 z-999999'>
       <div className="relative ">
                 <GlassIcons items={items} className="text-white flex justify-center w-full items-center h-50" />
               </div>
