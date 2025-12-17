@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, User, UserPlus } from "lucide-react";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -60,9 +60,7 @@ const Signup = () => {
               />
             </div>
             {errors.name && (
-              <p className="text-red-400 text-xs mt-1">
-                {errors.name.message}
-              </p>
+              <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
             )}
           </div>
 
@@ -99,9 +97,7 @@ const Signup = () => {
 
           {/* Password */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
-              Password
-            </label>
+            <label className="block text-sm text-gray-300 mb-1">Password</label>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -114,10 +110,8 @@ const Signup = () => {
                     message: "Minimum 8 characters required",
                   },
                   pattern: {
-                    value:
-                      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/,
-                    message:
-                      "Must include upper, lower, number & special char",
+                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/,
+                    message: "Must include upper, lower, number & special char",
                   },
                 })}
                 className={`w-full pl-10 pr-12 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
@@ -180,9 +174,18 @@ const Signup = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="w-full py-3 rounded-xl text-green-500 cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-600 font-semibold tracking-wide hover:scale-[1.02] active:scale-[0.97] transition disabled:opacity-50"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 
+             text-green-500 cursor-pointer font-semibold tracking-wide hover:scale-[1.02] 
+             active:scale-[0.97] transition disabled:opacity-50"
           >
-            {isSubmitting ? "Creating account..." : "Sign Up"}
+            {isSubmitting ? (
+              "Creating account..."
+            ) : (
+              <span className="flex items-center justify-center gap-2">
+                <UserPlus size={18} />
+                Sign Up
+              </span>
+            )}
           </button>
         </form>
 
