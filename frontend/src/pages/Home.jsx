@@ -177,9 +177,15 @@ const Home = () => {
       {/* Our Team Card */}
       <div>
         <h1 className="text-blue-500 text-center text-bold text-2xl my-21 items-center justify-center">
-          Our Team Members
+          Who am i?
         </h1>
-        <TeamCard />
+        <div className="flex bg-[#222] justify-evenly flex-wrap">
+          <div className=" text-white w-[50vw] text-xl font-bold">
+            <h1>MD AMMAD HUSSAIN</h1>
+          </div>
+          <TeamCard />
+          </div>
+        
       </div>
     </div>
   );
