@@ -215,8 +215,8 @@ const Home = () => {
         </CardSwap>
       </div>
       {/* who am i card */}
-      <div className="my-80">
-        <h1 className="text-blue-500 text-center font-extrabold text-2xl my-21 items-center justify-center tracking-widest">
+      <div className="mt-80 mb-0">
+        <h1 className="text-blue-500 text-center font-extrabold text-2xl my-12 items-center justify-center tracking-widest">
           Who am i?
         </h1>
         <div className="flex bg-[#222] justify-evenly flex-wrap">
@@ -228,49 +228,14 @@ const Home = () => {
               <span className="text-blue-400">H</span>USSAIN
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              earum reprehenderit error sapiente. Qui tenetur cum, quod
-              aspernatur nam animi fuga repellendus, aut molestias dignissimos
-              quam veritatis nostrum assumenda. Ducimus cum, et odio error
-              veniam, quisquam placeat itaque sit dolorum eveniet magnam ad ipsa
-              eos fugiat vitae nemo cumque quae iusto harum necessitatibus
-              corrupti, quaerat esse consequuntur. Eveniet vero neque esse
-              dignissimos amet. Dolor veritatis quaerat dolores laudantium
-              porro? Minima temporibus iste veniam dolorem omnis alias
-              laudantium ipsa autem, harum, impedit laboriosam nobis blanditiis
-              tempora quae iure! Laboriosam velit doloremque consequatur dolor.
-              Illo, unde enim modi quibusdam velit consequuntur architecto
-              minus, ut dicta, reprehenderit illum atque dolorum sed hic. Esse
-              quos voluptatum impedit illum eveniet consequatur harum neque
-              dolor nisi similique delectus vitae nemo et nihil distinctio,
-              voluptatibus itaque cum obcaecati. Asperiores perferendis
-              laudantium mollitia illum vitae eum recusandae ex iure, aut minus
-              corrupti ipsa nam magni repellat accusantium reiciendis placeat.
-              Recusandae odit quod quae iusto nostrum placeat optio est illum
-              sunt, doloribus et possimus repudiandae aut tempore quis voluptate
-              perspiciatis ipsa tempora ratione doloremque debitis asperiores
-              itaque cupiditate aliquid! Pariatur delectus quae, quas cumque
-              fuga tempora nobis harum natus, laudantium omnis aut! Quae sunt
-              vitae minima repellendus possimus, sit laudantium quo eligendi
-              corrupti. Magnam quo blanditiis doloribus at aperiam ipsum,
-              nostrum nihil inventore saepe facilis ea itaque nemo maiores id
-              quidem. Et ad id exercitationem corrupti blanditiis corporis
-              voluptate illum, enim nesciunt alias harum eveniet nam ex
-              necessitatibus facere! Id minus eaque provident. Vero sunt nam
-              aliquam iste nulla odio id maxime libero voluptatum, blanditiis
-              explicabo. Dolores molestiae amet dicta architecto consequatur
-              magnam iste praesentium porro incidunt, quod eius adipisci, velit
-              error voluptas ad dignissimos aliquam atque iusto quos commodi
-              dolor. Ducimus fugit numquam corrupti ipsam, pariatur earum quia
-              molestias eligendi quis neque voluptatum, cumque deleniti
-              doloribus, rerum tempora.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto unde dolore nihil? Quidem eos facere, laboriosam dolore quasi libero fugiat a itaque dolorum. Recusandae saepe qui, itaque aliquid repellat nisi alias, accusantium dolore illo voluptatem voluptatum mollitia, corporis perferendis incidunt consequatur molestiae eaque non! Corporis, qui voluptate? Laborum atque quos tenetur provident porro totam nemo, dicta magni! Soluta provident vitae unde voluptatum, molestias distinctio itaque minus iste! Numquam illum nostrum sit ipsum eum fugit neque! Aliquid perferendis, quod maiores at quam recusandae, ipsa non officiis temporibus sapiente quo obcaecati, eveniet magni? Nostrum, amet? Nulla omnis veritatis deserunt voluptatem illum nihil repudiandae accusantium, nobis tenetur excepturi qui itaque eligendi eaque officiis id vitae totam illo ut. Incidunt suscipit a necessitatibus, soluta ratione voluptatem iste repudiandae tenetur minima placeat cum velit molestiae, aspernatur ipsam, omnis doloremque quia blanditiis exercitationem harum? Molestias, velit cumque quidem at hic repudiandae amet provident ratione cum nostrum quas, atque dicta expedita vel ipsum quae reiciendis voluptatum, nobis quasi. Illum aperiam suscipit laboriosam maxime cumque corporis labore aut, odio tempora! Nihil eos veniam possimus officiis, vitae sapiente aliquam omnis officia iure recusandae dolores ab iusto nobis veritatis sit dolore consequuntur repellat placeat. Quam illo pariatur eaque consequuntur possimus?
             </p>
           </div>
           <TeamCard />
         </div>
         {/* Glass icons */}
-        <div className="h-400 relative w-full bg-white px-50">
-          <GlassIcons items={items} className="text-white flex justify-center w-full items-center h-100 gap-0" />
+        <div className="h-400 relative w-full px-50 ">
+          <GlassIcons items={items} className="text-white flex justify-center w-full items-center h-50" />
         </div>
       </div>
     </div>
