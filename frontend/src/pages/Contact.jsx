@@ -22,7 +22,7 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4 py-16 flex flex-col items-center">
       <h1 className="text-4xl font-bold text-white text-center mb-8">
-        Get in Touch
+        Get in Touch with Ammad !
       </h1>
       <p className="text-gray-400 text-center mb-12 max-w-2xl">
         We'd love to hear from you! Fill out the form below or reach us via email, phone.
