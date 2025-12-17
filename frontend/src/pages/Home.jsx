@@ -216,7 +216,7 @@ const Home = () => {
       </div>
       {/* who am i card */}
       <div className="my-80">
-        <h1 className="text-blue-500 text-center text-bold text-2xl my-21 items-center justify-center tracking-widest">
+        <h1 className="text-blue-500 text-center font-extrabold text-2xl my-21 items-center justify-center tracking-widest">
           Who am i?
         </h1>
         <div className="flex bg-[#222] justify-evenly flex-wrap">
