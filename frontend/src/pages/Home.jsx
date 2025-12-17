@@ -1,7 +1,6 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import Antigravity from "../components/custom-components/Antigravity";
 import TeamCard from "../components/TeamCard";
 import Folder from "../components/custom-components/Folder";
 
@@ -69,24 +68,24 @@ const Home = () => {
     </a>,
   ];
 
+  const skills = [
+    "JavaScript", "React", "Node.js", "Express", "MongoDB", "TailwindCSS", "Python", "MERN Stack"
+  ];
+
+  const projects = [
+    { name: "Project One", desc: "This is a demo project showing awesome features.", link: "#" },
+    { name: "Project Two", desc: "Another cool project with dummy data for display.", link: "#" },
+    { name: "Project Three", desc: "Example project to fill the portfolio section.", link: "#" },
+  ];
+
+  const testimonials = [
+    { name: "John Doe", feedback: "Ammad is a fantastic developer, highly recommended!" },
+    { name: "Jane Smith", feedback: "Worked with Ammad on multiple projects. Great skills!" },
+    { name: "Client X", feedback: "Delivered beyond expectations, very professional." },
+  ];
+
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-[#020617] via-[#0f172a] to-black text-white">
-      {/* Antigravity Particle Background */}
-      {/* Antigravity Particle Background */}
-      <div className="fixed inset-0 -z-10">
-        <Antigravity
-          count={2500}
-          magnetRadius={10}
-          ringRadius={10}
-          waveSpeed={0.5}
-          waveAmplitude={1}
-          particleSize={1.5}
-          lerpSpeed={0.05}
-          color={"#C71585"}
-          autoAnimate={true}
-          particleVariance={1.2}
-        />
-      </div>
+    <div className="relative w-full min-h-screen bg-gradient-to-br from-[#020617] via-[#0f172a] to-black text-white">
 
       {/* Hero Section */}
       <motion.div
@@ -95,7 +94,7 @@ const Home = () => {
         transition={{ duration: 1 }}
         className="relative w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-10 lg:px-32 gap-16"
       >
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 flex flex-col justify-center space-y-6">
           <motion.h1
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -139,7 +138,7 @@ const Home = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="flex-1 w-full max-w-md"
+          className="flex-1 flex justify-center items-center w-full max-w-md"
         >
           <div className="w-64 h-64 relative">
             <Tilt
@@ -162,12 +161,71 @@ const Home = () => {
 
       {/* Certificates Section */}
       <div id="certificates" className="max-w-6xl mx-auto py-32">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-30">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-12">
           My Certificates
         </h2>
         <div className="flex flex-wrap justify-center gap-50">
           <Folder size={2} color="#5227FF" items={images1} />
           <Folder size={2} color="#5227FF" items={images2} />
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="max-w-6xl mx-auto py-32" id="skills">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-12">
+          My Skills
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl text-white font-semibold hover:scale-105 transform transition"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Projects Section */}
+      <div className="max-w-6xl mx-auto py-32" id="projects">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-12">
+          Projects
+        </h2>
+        <div className="flex flex-wrap justify-center gap-10">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 backdrop-blur-md p-6 rounded-xl w-72 hover:scale-105 transform transition"
+            >
+              <h3 className="text-xl font-bold text-white mb-2">{project.name}</h3>
+              <p className="text-gray-300 mb-4">{project.desc}</p>
+              <a
+                href={project.link}
+                className="text-blue-400 font-semibold hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="max-w-6xl mx-auto py-32" id="testimonials">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-12">
+          Testimonials
+        </h2>
+        <div className="flex flex-wrap justify-center gap-10">
+          {testimonials.map((t, idx) => (
+            <div
+              key={idx}
+              className="bg-white/10 backdrop-blur-md p-6 rounded-xl w-80 hover:scale-105 transform transition"
+            >
+              <p className="text-gray-300 mb-4">"{t.feedback}"</p>
+              <p className="text-white font-bold">- {t.name}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -196,6 +254,20 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-[#0f172a] py-12 mt-12">
+        <div className="max-w-6xl mx-auto text-center text-gray-400 space-y-4">
+          <p>© 2025 Md Ammad Hussain. All rights reserved.</p>
+          <p>
+            <a href="#skills" className="hover:text-blue-400 transition mx-2">Skills</a>|
+            <a href="#projects" className="hover:text-blue-400 transition mx-2">Projects</a>|
+            <a href="#certificates" className="hover:text-blue-400 transition mx-2">Certificates</a>|
+            <a href="#about" className="hover:text-blue-400 transition mx-2">About</a>
+          </p>
+          <p>Email: example@domain.com | Phone: +1234567890</p>
+        </div>
+      </footer>
     </div>
   );
 };
