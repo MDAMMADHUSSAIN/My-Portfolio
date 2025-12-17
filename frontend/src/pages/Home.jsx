@@ -69,7 +69,7 @@ const Home = () => {
   ];
 
   const skills = [
-    "JavaScript", "React", "Node.js", "Express", "MongoDB", "TailwindCSS", "Python", "MERN Stack"
+    "JavaScript", "React", "Node.js", "Express", "MongoDB", "TailwindCSS", "Python", "Java", "Flutter", "Dart"
   ];
 
   const projects = [
@@ -79,9 +79,9 @@ const Home = () => {
   ];
 
   const testimonials = [
-    { name: "John Doe", feedback: "Ammad is a fantastic developer, highly recommended!" },
-    { name: "Jane Smith", feedback: "Worked with Ammad on multiple projects. Great skills!" },
-    { name: "Client X", feedback: "Delivered beyond expectations, very professional." },
+    { name: "Client X", feedback: "Ammad is a fantastic developer, highly recommended!" },
+    { name: "Client Y", feedback: "Worked with Ammad on multiple projects. Great skills!" },
+    { name: "Client Z", feedback: "Delivered beyond expectations, very professional." },
   ];
 
   return (
@@ -161,7 +161,7 @@ const Home = () => {
 
       {/* Certificates Section */}
       <div id="certificates" className="max-w-6xl mx-auto py-32">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-400 text-center mb-35">
           My Certificates
         </h2>
         <div className="flex flex-wrap justify-center gap-50">
@@ -179,7 +179,7 @@ const Home = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl text-white font-semibold hover:scale-105 transform transition"
+              className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl text-white hover:text-blue-500 cursor-pointer font-semibold hover:scale-105 transform transition"
             >
               {skill}
             </div>
@@ -254,20 +254,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-[#0f172a] py-12 mt-12">
-        <div className="max-w-6xl mx-auto text-center text-gray-400 space-y-4">
-          <p>© 2025 Md Ammad Hussain. All rights reserved.</p>
-          <p>
-            <a href="#skills" className="hover:text-blue-400 transition mx-2">Skills</a>|
-            <a href="#projects" className="hover:text-blue-400 transition mx-2">Projects</a>|
-            <a href="#certificates" className="hover:text-blue-400 transition mx-2">Certificates</a>|
-            <a href="#about" className="hover:text-blue-400 transition mx-2">About</a>
-          </p>
-          <p>Email: example@domain.com | Phone: +1234567890</p>
-        </div>
-      </footer>
     </div>
   );
 };
