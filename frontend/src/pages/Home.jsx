@@ -94,6 +94,7 @@ const Home = () => {
             part of projects that challenge my skills and encourage innovation
             in web technologies.
           </p>
+          <h2 className="text-blue-500 text-xl font-semibold text-center py-10">Browse my certificates below</h2>
           <div className="h-[100px] relative mt-20 flex flex-wrap justify-evenly gap-20">
             <Folder
               size={2}
@@ -174,14 +175,15 @@ const Home = () => {
           </Card>
         </CardSwap>
       </div>
-      {/* Our Team Card */}
-      <div>
-        <h1 className="text-blue-500 text-center text-bold text-2xl my-21 items-center justify-center">
+      {/* who am i card */}
+      <div className="my-80">
+        <h1 className="text-blue-500 text-center text-bold text-2xl my-21 items-center justify-center tracking-widest">
           Who am i?
         </h1>
         <div className="flex bg-[#222] justify-evenly flex-wrap">
-          <div className=" text-white w-[50vw] text-xl font-bold">
-            <h1>MD AMMAD HUSSAIN</h1>
+          <div className=" text-white w-[50vw]  gap-5 flex flex-col">
+            <h1 className="text-xl font-bold"> <span className="text-blue-400">M</span>D  <span className="text-blue-400">A</span>MMAD  <span className="text-blue-400">H</span>USSAIN</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum reprehenderit error sapiente. Qui tenetur cum, quod aspernatur nam animi fuga repellendus, aut molestias dignissimos quam veritatis nostrum assumenda. Ducimus cum, et odio error veniam, quisquam placeat itaque sit dolorum eveniet magnam ad ipsa eos fugiat vitae nemo cumque quae iusto harum necessitatibus corrupti, quaerat esse consequuntur. Eveniet vero neque esse dignissimos amet. Dolor veritatis quaerat dolores laudantium porro? Minima temporibus iste veniam dolorem omnis alias laudantium ipsa autem, harum, impedit laboriosam nobis blanditiis tempora quae iure! Laboriosam velit doloremque consequatur dolor. Illo, unde enim modi quibusdam velit consequuntur architecto minus, ut dicta, reprehenderit illum atque dolorum sed hic. Esse quos voluptatum impedit illum eveniet consequatur harum neque dolor nisi similique delectus vitae nemo et nihil distinctio, voluptatibus itaque cum obcaecati. Asperiores perferendis laudantium mollitia illum vitae eum recusandae ex iure, aut minus corrupti ipsa nam magni repellat accusantium reiciendis placeat. Recusandae odit quod quae iusto nostrum placeat optio est illum sunt, doloribus et possimus repudiandae aut tempore quis voluptate perspiciatis ipsa tempora ratione doloremque debitis asperiores itaque cupiditate aliquid! Pariatur delectus quae, quas cumque fuga tempora nobis harum natus, laudantium omnis aut! Quae sunt vitae minima repellendus possimus, sit laudantium quo eligendi corrupti. Magnam quo blanditiis doloribus at aperiam ipsum, nostrum nihil inventore saepe facilis ea itaque nemo maiores id quidem. Et ad id exercitationem corrupti blanditiis corporis voluptate illum, enim nesciunt alias harum eveniet nam ex necessitatibus facere! Id minus eaque provident. Vero sunt nam aliquam iste nulla odio id maxime libero voluptatum, blanditiis explicabo. Dolores molestiae amet dicta architecto consequatur magnam iste praesentium porro incidunt, quod eius adipisci, velit error voluptas ad dignissimos aliquam atque iusto quos commodi dolor. Ducimus fugit numquam corrupti ipsam, pariatur earum quia molestias eligendi quis neque voluptatum, cumque deleniti doloribus, rerum tempora.</p>
           </div>
           <TeamCard />
           </div>
