@@ -23,7 +23,7 @@ const Login = () => {
       <div className="w-full max-w-md bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 shadow-2xl">
         {/* Header */}
         <h1 className="text-3xl font-bold text-white text-center">
-          Welcome Back 👋
+          Welcome Back
         </h1>
         <p className="text-gray-400 text-center mt-2 mb-8">
           Login to continue your journey
@@ -122,7 +122,7 @@ const Login = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold tracking-wide hover:scale-[1.02] active:scale-[0.97] transition disabled:opacity-50"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 cursor-pointer text-green-500 font-semibold tracking-wide hover:scale-[1.02] active:scale-[0.97] transition disabled:opacity-50"
           >
             {isSubmitting ? "Logging in..." : "Login"}
           </button>

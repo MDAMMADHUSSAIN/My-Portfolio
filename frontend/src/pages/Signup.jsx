@@ -24,7 +24,7 @@ const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4">
       {/* Glass Card */}
-      <div className="w-full max-w-md bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+      <div className="w-full max-w-md bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 shadow-2xl my-20">
         {/* Header */}
         <h1 className="text-3xl font-bold text-white text-center">
           Create Your Account
@@ -180,7 +180,7 @@ const Signup = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="w-full py-3 rounded-xl cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold tracking-wide hover:scale-[1.02] active:scale-[0.97] transition disabled:opacity-50"
+            className="w-full py-3 rounded-xl text-green-500 cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-600 font-semibold tracking-wide hover:scale-[1.02] active:scale-[0.97] transition disabled:opacity-50"
           >
             {isSubmitting ? "Creating account..." : "Sign Up"}
           </button>
