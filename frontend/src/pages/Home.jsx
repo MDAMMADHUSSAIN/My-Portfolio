@@ -21,13 +21,6 @@ import Python from "../assets/python.png";
 import Pythonpdf from "../assets/pdfcertificates/python.pdf";
 import Webtech from "../assets/webtech.webp";
 import Folder from "../components/custom-components/Folder";
-import GlassIcons from '../components/custom-components/GlassIcons'
-import {FileArchive} from "lucide-react" 
-import {BookA} from "lucide-react" 
-import {FolderHeart} from "lucide-react" 
-import {CloudUpload} from "lucide-react" 
-import {FilePenLine} from "lucide-react" 
-import {ChartBarIncreasing} from "lucide-react" 
 import Footer from '../components/footer/Footer'
 const Home = () => {
   const images1 = [
@@ -75,15 +68,6 @@ const Home = () => {
         className="w-full h-full object-cover cursor-pointer"
       />
     </a>,
-  ];
-  // icons part
-  const items = [
-    { icon: <FileArchive />, color: "blue", label: "Files" },
-    { icon: <BookA />, color: "purple", label: "Books" },
-    { icon: <FolderHeart />, color: "red", label: "Health" },
-    { icon: <CloudUpload />, color: "indigo", label: "Weather" },
-    { icon: <FilePenLine />, color: "orange", label: "Notes" },
-    { icon: <ChartBarIncreasing />, color: "green", label: "Stats" },
   ];
 
   return (
