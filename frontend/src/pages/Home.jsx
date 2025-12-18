@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import TeamCard from "../components/TeamCard";
+import UserCard from "../components/UserCard";
 import Folder from "../components/custom-components/Folder";
 
 // Assets
@@ -135,7 +135,6 @@ const Home = () => {
       title: "Foundation of Web Development",
       desc: "Initiated the web development journey by learning HTML, CSS, and JavaScript, building a clear understanding of core frontend concepts, browser behavior, and the fundamentals of creating simple, responsive user interfaces.",
     },
-
     {
       year: "2023",
       title: "Explored MERN stack",
@@ -229,6 +228,22 @@ const Home = () => {
         </motion.div>
       </section>
 
+      {/* 3D Lanyard Section */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mb-8 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+            Interactive ID
+          </p>
+          <h2 className="text-3xl font-bold text-blue-400 md:text-4xl">
+            3D Developer Badge
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-gray-300 sm:text-base">
+            Drag the badge around to feel the physics. Replace this 3D card with
+            your own event pass, portfolio ID, or any creative visual you like.
+          </p>
+        </div>
+      </section>
+
       {/* Services Section (dummy) */}
       <section
         id="services"
@@ -273,7 +288,6 @@ const Home = () => {
         <div className="mt-10 grid gap-10 md:grid-cols-2">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">
-              {" "}
               Core Computer Science
             </h3>
             <p className="text-sm text-gray-300">
@@ -287,7 +301,7 @@ const Home = () => {
               principles and practices (Google)
             </p>
 
-            <div className="flex justify-center mt-20">
+            <div className="mt-20 flex justify-center">
               <Folder size={2} color="#5227FF" items={images1} />
             </div>
           </div>
@@ -314,7 +328,7 @@ const Home = () => {
               Research University)
             </p>
 
-            <div className="flex justify-center mt-20">
+            <div className="mt-20 flex justify-center">
               <Folder size={2} color="#5227FF" items={images2} />
             </div>
           </div>
@@ -370,7 +384,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Experience Timeline (dummy) */}
+      {/* Experience Timeline */}
       <section
         id="experience"
         className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
@@ -415,7 +429,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Who Am I Section (improved layout) */}
+      {/* Who Am I Section */}
       <section
         id="about"
         className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8"
@@ -438,10 +452,24 @@ const Home = () => {
               <span className="text-blue-400">H</span>USSAIN
             </h3>
             <p className="text-sm text-gray-300 sm:text-base">
-             I began my journey in web development by learning HTML, CSS, and JavaScript, building a strong foundation in core programming and problem-solving. Over time, I expanded my skills through certifications in Operating Systems, AI, Project Management, and Data Structures, while exploring full-stack development and real-world applications with the MERN stack. I am motivated by solving challenging problems and creating efficient, scalable solutions, and I aim to contribute to impactful software projects that combine technical excellence with practical value.
+              I began my journey in web development by learning HTML, CSS, and
+              JavaScript, building a strong foundation in core programming and
+              problem-solving. Over time, I expanded my skills through
+              certifications in Operating Systems, AI, Project Management, and
+              Data Structures, while exploring full-stack development and
+              real-world applications with the MERN stack. I am motivated by
+              solving challenging problems and creating efficient, scalable
+              solutions, and I aim to contribute to impactful software projects
+              that combine technical excellence with practical value.
             </p>
             <p className="text-sm text-gray-300 sm:text-base">
-               I enjoy working with the MERN stack (MongoDB, Express, React, Node.js) to build scalable web applications and real-world solutions. I am particularly passionate about developing dashboards, SaaS applications, and responsive user interfaces that solve practical problems. My long-term goal is to grow as a full-stack developer, contributing to innovative software products while continuously learning and mastering new technologies.
+              I enjoy working with the MERN stack (MongoDB, Express, React,
+              Node.js) to build scalable web applications and real-world
+              solutions. I am particularly passionate about developing
+              dashboards, SaaS applications, and responsive user interfaces that
+              solve practical problems. My long-term goal is to grow as a
+              full-stack developer, contributing to innovative software products
+              while continuously learning and mastering new technologies.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -450,7 +478,12 @@ const Home = () => {
                   Current focus
                 </p>
                 <p className="text-sm text-gray-200">
-                 Currently working as a full-stack developer at an enterprise-grade automotive company in Kuwait City. As an early-career professional, I am gaining hands-on experience in building and maintaining scalable web applications, contributing to real-world projects, and strengthening my expertise in full-stack development.
+                  Currently working as a full-stack developer at an
+                  enterprise-grade automotive company in Kuwait City. As an
+                  early-career professional, I am gaining hands-on experience in
+                  building and maintaining scalable web applications,
+                  contributing to real-world projects, and strengthening my
+                  expertise in full-stack development.
                 </p>
               </div>
               <div className="rounded-xl border border-white/10 bg-white/5 p-4">
@@ -458,20 +491,25 @@ const Home = () => {
                   Strengths
                 </p>
                 <p className="text-sm text-gray-200">
-                  Strong problem-solving and analytical skills, proficiency in building clean and responsive user interfaces, and a focus on developing efficient, high-performance full-stack applications.
+                  Strong problem-solving and analytical skills, proficiency in
+                  building clean and responsive user interfaces, and a focus on
+                  developing efficient, high-performance full-stack
+                  applications.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Visual card / TeamCard */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg shadow-black/40 backdrop-blur-md">
-            <TeamCard />
+          {/* Visual card / UserCard */}
+          <div className="flex items-center justify-center">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg shadow-black/40 backdrop-blur-md">
+              <UserCard />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Call To Action (dummy) */}
+      {/* Call To Action */}
       <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-blue-500/40 bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-purple-600/20 p-6 text-center shadow-lg shadow-black/40 sm:p-8">
           <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
