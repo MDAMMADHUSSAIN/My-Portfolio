@@ -18,26 +18,32 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4">
+      {/* background glow */}
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-40">
+        <div className="absolute -left-24 top-32 h-52 w-52 rounded-full bg-blue-500/25 blur-3xl" />
+        <div className="absolute right-0 bottom-10 h-64 w-64 rounded-full bg-indigo-500/25 blur-3xl" />
+      </div>
+
       {/* Glass Card */}
-      <div className="w-full max-w-md bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+      <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl">
         {/* Header */}
-        <h1 className="text-3xl font-bold text-white text-center">
-          Welcome Back
-        </h1>
-        <p className="text-gray-400 text-center mt-2 mb-8">
-          Login to continue your journey
-        </p>
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
+          <p className="mt-2 text-sm text-gray-400">
+            Login to continue your journey
+          </p>
+        </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Email */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="mb-1 block text-sm text-gray-300">
               Email Address
             </label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type="email"
                 placeholder="ammad@anymail.com"
@@ -48,7 +54,7 @@ const Login = () => {
                     message: "Enter a valid email",
                   },
                 })}
-                className={`w-full pl-10 pr-4 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.email
                     ? "border-red-500"
                     : "border-white/10 focus:border-blue-500"
@@ -56,7 +62,7 @@ const Login = () => {
               />
             </div>
             {errors.email && (
-              <p className="text-red-400 text-xs mt-1">
+              <p className="mt-1 text-xs text-red-400">
                 {errors.email.message}
               </p>
             )}
@@ -64,9 +70,11 @@ const Login = () => {
 
           {/* Password */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">Password</label>
+            <label className="mb-1 block text-sm text-gray-300">
+              Password
+            </label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Lock className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
@@ -77,7 +85,7 @@ const Login = () => {
                     message: "Minimum 6 characters required",
                   },
                 })}
-                className={`w-full pl-10 pr-12 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 pr-12 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.password
                     ? "border-red-500"
                     : "border-white/10 focus:border-blue-500"
@@ -87,22 +95,22 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition hover:text-white"
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
             {errors.password && (
-              <p className="text-red-400 text-xs mt-1">
+              <p className="mt-1 text-xs text-red-400">
                 {errors.password.message}
               </p>
             )}
           </div>
 
           {/* Options */}
-          <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center gap-2 text-gray-400 cursor-pointer">
-              <input type="checkbox" className="accent-blue-500" />
+          <div className="flex items-center justify-between text-xs sm:text-sm">
+            <label className="flex cursor-pointer items-center gap-2 text-gray-400">
+              <input type="checkbox" className="h-4 w-4 accent-blue-500" />
               Remember me
             </label>
 
@@ -114,27 +122,28 @@ const Login = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 
-             text-green-500 font-semibold tracking-wide hover:scale-[1.02] 
-             active:scale-[0.97] transition disabled:opacity-50"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] active:scale-[0.97] disabled:opacity-60"
           >
             {isSubmitting ? (
               "Logging in..."
             ) : (
-              <span className="flex items-center justify-center gap-2">
+              <>
                 <LogIn size={18} />
-                Login
-              </span>
+                <span>Login</span>
+              </>
             )}
           </button>
         </form>
 
         {/* Footer */}
-        <p className="text-gray-400 text-sm text-center mt-8">
+        <p className="mt-8 text-center text-xs text-gray-400 sm:text-sm">
           Don’t have an account?{" "}
-          <span className="text-blue-400 hover:underline cursor-pointer">
-            <a href="signup">Signup</a>
-          </span>
+          <a
+            href="signup"
+            className="cursor-pointer font-semibold text-blue-400 hover:underline"
+          >
+            Signup
+          </a>
         </p>
       </div>
     </div>
