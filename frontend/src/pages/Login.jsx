@@ -122,7 +122,7 @@ const Login = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] active:scale-[0.97] disabled:opacity-60"
+            className="flex w-full items-center justify-center gap-2 cursor-pointer rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] active:scale-[0.97] disabled:opacity-60"
           >
             {isSubmitting ? (
               "Logging in..."

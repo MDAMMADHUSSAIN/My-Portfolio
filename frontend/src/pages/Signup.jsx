@@ -22,26 +22,34 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-black px-4">
+      {/* background glow (same feel as login) */}
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-40">
+        <div className="absolute -left-24 top-32 h-52 w-52 rounded-full bg-emerald-500/25 blur-3xl" />
+        <div className="absolute right-0 bottom-10 h-64 w-64 rounded-full bg-indigo-500/25 blur-3xl" />
+      </div>
+
       {/* Glass Card */}
-      <div className="w-full max-w-md bg-white/5 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 shadow-2xl my-20">
+      <div className="my-20 w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl">
         {/* Header */}
-        <h1 className="text-3xl font-bold text-white text-center">
-          Create Your Account
-        </h1>
-        <p className="text-gray-400 text-center mt-2 mb-8">
-          Join us and start your journey
-        </p>
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold text-white">
+            Create Your Account
+          </h1>
+          <p className="mt-2 text-sm text-gray-400">
+            Join us and start your journey
+          </p>
+        </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="mb-1 block text-sm text-gray-300">
               Full Name
             </label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <User className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Ammad"
@@ -52,25 +60,27 @@ const Signup = () => {
                     message: "Minimum 3 characters required",
                   },
                 })}
-                className={`w-full pl-10 pr-4 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.name
                     ? "border-red-500"
-                    : "border-white/10 focus:border-blue-500"
+                    : "border-white/10 focus:border-emerald-500"
                 }`}
               />
             </div>
             {errors.name && (
-              <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
+              <p className="mt-1 text-xs text-red-400">
+                {errors.name.message}
+              </p>
             )}
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="mb-1 block text-sm text-gray-300">
               Email Address
             </label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type="email"
                 placeholder="ammad@anymail.com"
@@ -81,15 +91,15 @@ const Signup = () => {
                     message: "Enter a valid email",
                   },
                 })}
-                className={`w-full pl-10 pr-4 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.email
                     ? "border-red-500"
-                    : "border-white/10 focus:border-blue-500"
+                    : "border-white/10 focus:border-emerald-500"
                 }`}
               />
             </div>
             {errors.email && (
-              <p className="text-red-400 text-xs mt-1">
+              <p className="mt-1 text-xs text-red-400">
                 {errors.email.message}
               </p>
             )}
@@ -97,9 +107,11 @@ const Signup = () => {
 
           {/* Password */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">Password</label>
+            <label className="mb-1 block text-sm text-gray-300">
+              Password
+            </label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Lock className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
@@ -111,25 +123,26 @@ const Signup = () => {
                   },
                   pattern: {
                     value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/,
-                    message: "Must include upper, lower, number & special char",
+                    message:
+                      "Must include upper, lower, number & special char",
                   },
                 })}
-                className={`w-full pl-10 pr-12 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 pr-12 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.password
                     ? "border-red-500"
-                    : "border-white/10 focus:border-blue-500"
+                    : "border-white/10 focus:border-emerald-500"
                 }`}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition hover:text-white"
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
             {errors.password && (
-              <p className="text-red-400 text-xs mt-1">
+              <p className="mt-1 text-xs text-red-400">
                 {errors.password.message}
               </p>
             )}
@@ -137,11 +150,11 @@ const Signup = () => {
 
           {/* Confirm Password */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="mb-1 block text-sm text-gray-300">
               Confirm Password
             </label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Lock className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type={showConfirm ? "text" : "password"}
                 placeholder="••••••••"
@@ -150,22 +163,22 @@ const Signup = () => {
                   validate: (value) =>
                     value === password || "Passwords do not match",
                 })}
-                className={`w-full pl-10 pr-12 py-3 rounded-xl bg-black/40 text-white outline-none border transition ${
+                className={`w-full rounded-xl border bg-black/40 px-10 pr-12 py-3 text-sm text-white outline-none transition placeholder:text-gray-500 ${
                   errors.confirmPassword
                     ? "border-red-500"
-                    : "border-white/10 focus:border-blue-500"
+                    : "border-white/10 focus:border-emerald-500"
                 }`}
               />
               <button
                 type="button"
                 onClick={() => setShowConfirm(!showConfirm)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 transition hover:text-white"
               >
                 {showConfirm ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
             </div>
             {errors.confirmPassword && (
-              <p className="text-red-400 text-xs mt-1">
+              <p className="mt-1 text-xs text-red-400">
                 {errors.confirmPassword.message}
               </p>
             )}
@@ -174,27 +187,28 @@ const Signup = () => {
           {/* Submit */}
           <button
             disabled={isSubmitting}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 
-             text-green-500 cursor-pointer font-semibold tracking-wide hover:scale-[1.02] 
-             active:scale-[0.97] transition disabled:opacity-50"
+            className="flex w-full items-center justify-center gap-2 cursor-pointer rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-3 text-sm font-semibold text-white transition hover:scale-[1.02] active:scale-[0.97] disabled:opacity-50"
           >
             {isSubmitting ? (
               "Creating account..."
             ) : (
-              <span className="flex items-center justify-center gap-2">
+              <>
                 <UserPlus size={18} />
-                Sign Up
-              </span>
+                <span>Sign Up</span>
+              </>
             )}
           </button>
         </form>
 
         {/* Footer */}
-        <p className="text-gray-400 text-sm text-center mt-8">
+        <p className="mt-8 text-center text-sm text-gray-400">
           Already have an account?{" "}
-          <span className="text-blue-400 hover:underline cursor-pointer">
-            <a href="login">Login</a>
-          </span>
+          <a
+            href="login"
+            className="cursor-pointer font-semibold text-blue-400 hover:underline"
+          >
+            Login
+          </a>
         </p>
       </div>
     </div>
