@@ -40,9 +40,7 @@ const Footer = () => {
               MD AMMAD HUSSAIN
             </h3>
             <p className="text-sm text-white/70">
-              A modern full‑stack developer portfolio showcasing projects,
-              experiments, and continuous learning across React, Express, and
-              modern UI engineering.
+              A modern full-stack developer portfolio highlighting innovative projects, hands-on experiments, and continuous growth with React, Express, and cutting-edge UI engineering.
             </p>
             <p className="text-xs text-white/40">
               Focused on clean code, smooth animations, and real‑world problem
@@ -84,10 +82,11 @@ const Footer = () => {
               <p>
                 Email:{" "}
                 <span className="font-medium text-white">
-                  yourmail@example.com
+                  md.ammad.hussain@gmail.com
                 </span>
               </p>
-              <p>Location: India</p>
+              <p>Permanent Location: India</p>
+              <p>Current Location: kuwait</p>
             </div>
           </div>
         </div>
@@ -95,7 +94,7 @@ const Footer = () => {
         {/* Bottom: copyright */}
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-4 text-xs text-white/50 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} MD Ammad Hussain. All rights reserved.
+            © {new Date().getFullYear()} Md Ammad Hussain. All rights reserved.
           </p>
           <p className="text-[11px]">
             Crafted with React, Vite, Tailwind CSS & Framer Motion.
