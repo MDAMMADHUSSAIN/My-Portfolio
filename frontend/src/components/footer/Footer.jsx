@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
         {/* Top: glass icons strip */}
         <div className="flex justify-center">
-          <div className="relative">
+          <div className="relative max-w-xl w-full">
             <GlassIcons
               items={items}
               className="flex h-auto w-full items-center justify-center text-white"
@@ -33,9 +33,9 @@ const Footer = () => {
         </div>
 
         {/* Middle: info columns */}
-        <div className="mt-10 grid gap-8 text-sm sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-8 text-sm sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand / about */}
-          <div className="space-y-3">
+          <div className="space-y-3 md:col-span-2 lg:col-span-1">
             <h3 className="text-base font-semibold tracking-[0.25em] text-blue-400 uppercase">
               MD AMMAD HUSSAIN
             </h3>
@@ -56,16 +56,16 @@ const Footer = () => {
               Quick navigation
             </h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-blue-400 cursor-pointer transition-colors">
+              <li className="cursor-pointer transition-colors hover:text-blue-400">
                 Projects
               </li>
-              <li className="hover:text-blue-400 cursor-pointer transition-colors">
+              <li className="cursor-pointer transition-colors hover:text-blue-400">
                 Experience
               </li>
-              <li className="hover:text-blue-400 cursor-pointer transition-colors">
+              <li className="cursor-pointer transition-colors hover:text-blue-400">
                 Skills
               </li>
-              <li className="hover:text-blue-400 cursor-pointer transition-colors">
+              <li className="cursor-pointer transition-colors hover:text-blue-400">
                 Contact
               </li>
             </ul>
