@@ -7,7 +7,7 @@ import { Code, Award, Star } from "lucide-react";
 import ProfilePic from "../assets/profile.png";
 import Project1 from "../assets/mern.png";
 import Project2 from "../assets/project.png";
-import Project3 from "../assets/mern3.png";
+import Project3 from "../assets/responsive.png";
 
 const About = () => {
   const skills = [
