@@ -77,8 +77,8 @@ const Home = () => {
     "TailwindCSS",
     "Python",
     "Java",
-    "Flutter",
-    "Dart",
+    "Flutter (Learning)",
+    "Dart (Learning)",
   ];
 
   const projects = [

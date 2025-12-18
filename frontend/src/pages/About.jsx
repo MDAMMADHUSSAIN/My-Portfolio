@@ -19,8 +19,8 @@ const About = () => {
     "TailwindCSS",
     "Python",
     "Java",
-    "Flutter",
-    "Dart",
+    "Flutter (Learning)",
+    "Dart (Learning)",
   ];
 
   const projects = [Project1, Project2, Project3];
