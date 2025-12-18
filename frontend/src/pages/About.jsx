@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Code, Award, Star } from "lucide-react";
 
 // Assets from src/assets
-import ProfilePic from "../assets/profile.jpg";
+import ProfilePic from "../assets/profile.png";
 import Project1 from "../assets/mern2.png";
 import Project2 from "../assets/project.png";
 import Project3 from "../assets/mern3.png";

@@ -5,7 +5,7 @@ import UserCard from "../components/UserCard";
 import Folder from "../components/custom-components/Folder";
 
 // Assets
-import Profile from "../assets/profile.jpg";
+import Profile from "../assets/profile.png";
 import OS from "../assets/OS.png";
 import OSpdf from "../assets/pdfcertificates/ospdf.pdf";
 import AI from "../assets/AI.png";

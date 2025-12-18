@@ -1,6 +1,6 @@
 import React from 'react'
 import ChromaGrid from './custom-components/ChromaGrid'
-import Profile from "../assets/profile.jpg";
+import Profile from "../assets/profile.png";
 
 const TeamCard = () => {
     const items = [
