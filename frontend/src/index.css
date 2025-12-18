@@ -2,8 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-*{
-  background: #000;
+*{ 
   font-family: cairo;
   box-sizing: border-box;
 }
