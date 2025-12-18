@@ -64,7 +64,7 @@ const Footer = () => {
                 Skills
               </li>
               <li className="cursor-pointer transition-colors hover:text-blue-400">
-                Contact
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
